@@ -1,0 +1,154 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("https://media.istockphoto.com/id/1311116510/vector/tropical-blurred-leaf-light-overlay-transparent-effect.jpg?s=612x612&w=0&k=20&c=AfRev8uPxRys1C5_cRZPdnOooKJkpHRPHY1solvDbfU=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px gray;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(32, 73, 114);
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: rgb(18, 57, 95);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: rgb(151, 147, 147);
+    color: rgb(9, 47, 85);
+  }
+  
+  .palette {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .color-swatch {
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .color-swatch:hover {
+    transform: scale(1.1);
+  }
+  
+  .color-code {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 5px 5px;
+  }
+  
+  /* Media Query for Tablets and smaller screens */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .palette {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .container {
+      width: 90%;
+      max-width: 500px;
+      padding: 15px;
+    }
+  
+    button {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Media Query for Mobile screens */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem; 
+    }
+  
+    .palette {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .color-swatch {
+      height: 60px; /* Smaller height for mobile */
+    }
+  
+    .container {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+    }
+  }
+  
+  /* Media Query for very small screens (less than 360px) */
+  @media (max-width: 360px) {
+    h1 {
+      font-size: 1.2rem; 
+      margin-bottom: 10px;
+    }
+  
+    .palette {
+      grid-template-columns: 1fr; 
+    }
+  
+    .color-swatch {
+      height: 50px; 
+    }
+  
+    .container {
+      width: 95%;
+      padding: 8px; 
+    }
+  
+    button {
+      font-size: 0.8rem;
+      padding: 5px 10px; 
+    }
+  
+    /* Hide margins and paddings for ultra-small screens to maximize space */
+    .palette {
+      gap: 5px; 
+    }
+  }
+  
